@@ -18,33 +18,37 @@ export default function Account() {
           <div className="w-full h-[1px] bg-gray-200 mt-2"></div>
           <form className="w-full h-32 ">
             <div className="flex mt-5">
-              <p className="text-lg inline-block w-[128px] ml-24">First Name</p>
+              <p className="text-sm text-gray-700 inline-block w-[128px] ml-24">First Name</p>
               <input
                 type="text"
-                className=" bg-[#F6F6F6F6] outline-none focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
+                placeholder="First Name"
+                className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
               />
             </div>
             <div className="flex mt-5">
-              <p className="text-lg w-32  ml-24">Last-Name</p>
+              <p className="text-sm text-gray-700 w-32  ml-24">Last Name</p>
               <input
                 type="text"
-                className=" bg-[#F6F6F6F6] outline-none focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
-              />
-            </div>
-
-            <div className="flex mt-5">
-              <p className="text-lg w-[70px] ml-36">Email</p>
-              <input
-                type="text"
-                className=" bg-[#F6F6F6F6] outline-none focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
+                placeholder="Last Name"
+                className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
               />
             </div>
 
             <div className="flex mt-5">
-              <p className="text-lg w-[128px]  ml-24">Password</p>
+              <p className="text-sm text-gray-700 w-[90px] ml-32">Email</p>
               <input
                 type="text"
-                className=" bg-[#F6F6F6F6] outline-none focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
+                placeholder="Email"
+                className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
+              />
+            </div>
+
+            <div className="flex mt-5">
+              <p className="text-sm text-gray-700 w-[129px]  ml-24">Password</p>
+              <input
+                type="text"
+                placeholder="Password"
+                className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
               />
             </div>
             <button className="flex items-center mt-5 ">
