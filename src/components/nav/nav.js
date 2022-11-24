@@ -10,7 +10,7 @@ let SignUpHistory = useHistory();
     <div>
       <nav>
         <div className="h-[92px] flex justify-between items-center px-24 w-full bg-[#F6F6F6] md:px-12 md:py-3 md:flex md:items-end sm:px-2 sm:flex sm:justify-center">
-          <h1 className="font-base flex items-center text-xs  sm:text-[12px]">
+          <h1 className="font-base flex items-center text-xs  sm:text-[12px]" onClick={()=> SignUpHistory.push('/Account')}>
             CURRENCY{" "}
             <i class="fa-solid fa-chevron-down text-[9px] pl-[5px]"></i>
           </h1>
