@@ -46,3 +46,8 @@
 .footer{
   border-top: 1px solid rgba(66, 65, 65, 0.808);
 }
+
+#shadow:focus{
+     box-shadow: #60a5fa 0px 0px 5px .1px ;
+
+}

@@ -31,12 +31,12 @@ export default function SignIn() {
 
             <label className="flex flex-col text-sm text-gray-600 ">
                 Email
-                <input placeholder="Email" type="text"  className=" h-8 border-[1px] outline-none border-gray-400 rounded-md px-2"/>
+                <input placeholder="Email" type="text"  className=" h-8 bg-[#F6F6F6F6]  focus:border-blue-300 focus:border-[1px]  border-[1px] outline-none border-gray-400 rounded-sm px-2 " id="shadow"/>
             </label>
 
             <label className="flex flex-col text-sm mt-3 text-gray-600">
                 Password
-                <input placeholder="Password" type="text"  className=" h-8 border-[1px] outline-none border-gray-400 rounded-md px-2"/>
+                <input placeholder="Password" type="text"  className=" h-8 bg-[#F6F6F6F6]  focus:border-blue-300 focus:border-[1px]  border-[1px] outline-none border-gray-400 rounded-sm px-2 " id="shadow"/>
                 <p className="text-xs">Forget The Password?</p>
             </label>
              <div className="flex text-sm items-center mt-5">
