@@ -1,13 +1,13 @@
 export default function SignIn() {
   return (
     <div className="w-full h-full  ">
-      <div className="w-full h-60 bg-slate-100 flex justify-center items-center">
+      <div className="w-full h-60 bg-slate-100 flex justify-center items-center md:h-48 sm:h-32">
         <h1 className="text-sm tracking-widest">
           Home / <span className="text-red-600"> Account </span>
         </h1>
       </div>
-      <div className="w-full p-12 flex justify-between">
-        <div className="w-1/2 h-full border-[1px] rounded-md border-gray-200  px-5 py-10 ">
+      <div className="lg: w-full p-12 flex justify-between md:flex md:flex-col ">
+        <div className="w-1/2 h-full border-[1px] rounded-md border-gray-200  px-5 py-10 md:w-full ">
           <h1 className="text-[27px] font-medium uppercase">New Customer</h1>
           <h1 className="text-xs font-bold text-gray-700 leading-10">
             Register Account
@@ -18,11 +18,11 @@ export default function SignIn() {
             previously made.
           </p>
 
-          <p className=" border-2 border-black w-[20%] h-12 mt-5 flex justify-center items-center font-semibold">
+          <p className="text-xs border-2 border-black w-32 h-12 mt-5 flex justify-center items-center font-bold ">
             Continue
           </p>
         </div>
-        <div className="w-1/2 ml-12 h-full border-[1px] rounded-md border-gray-200 px-5 py-10">
+        <div className="w-1/2 ml-12 h-full border-[1px] rounded-md border-gray-200 px-5 py-10 md:w-full md:-ml-0 md:mt-10">
           <h1 className="text-[28px] font-medium uppercase">Returning Customer</h1>
           <h1 className="text-xs font-bold text-gray-700 leading-10">
           I am a returning customer 
@@ -40,7 +40,7 @@ export default function SignIn() {
                 <p className="text-xs">Forget The Password?</p>
             </label>
              <div className="flex text-sm items-center mt-5">
-            <p className=" border-[2px] font-semibold border-black w-[20%] h-12  flex justify-center items-center">
+            <p className=" text-xs border-[2px] font-bold border-black w-32 h-12  flex justify-center items-center">
             Sign In
           </p>
 

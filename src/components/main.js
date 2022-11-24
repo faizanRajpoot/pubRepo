@@ -7,6 +7,7 @@ export default function Main(props) {
     <>
       {props.Nav}
       {props.children}
+
       {props.Footer}
     </>
   );

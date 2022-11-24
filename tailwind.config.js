@@ -7,11 +7,26 @@ module.exports = {
   darkMode: 'media', // or 'class'
   theme: {
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
+      lg: [
+        {
+          max: "1024px",
+        },
+      ],
+      md: [
+        {
+          max: "768px",
+        },
+      ],
+      tab: [
+        {
+          max: "700px",
+        },
+      ],
+      sm: [
+        {
+          max: "480px",
+        },
+      ],
     },
     supports: {},
     colors: ({ colors }) => ({

@@ -1,9 +1,9 @@
 export default function Footer(){
     return(
         <>
-        <div className="w-full h-[450px] bg-[#292929]">
-          <div className="grid grid-cols-6 pt-28 px-20 gap-x-16">
-            <div className="col-span-3 h-10">
+        <div className="w-full h-[450px] bg-[#292929] md:h-full  sm:w-full sm:h-full">
+          <div className="grid grid-cols-6 py-16 px-20 gap-x-16  md:h-full md:py-12 md:flex md:flex-wrap md:items-start justify-between sm:flex sm:flex-col sm:flex-wrap sm:w-full">
+            <div className="col-span-3 h-10 md:col-span-6  md:w-[50%] md:h-20 sm:w-full">
               <h1 className="text-md font-medium text-white tracking-tighter">
                 Contact Us
               </h1>
@@ -14,7 +14,8 @@ export default function Footer(){
                 best fashion and lifestyle brands.
                 <br /> +92 346 6666664
               </p>
-              <h1 className="text-md font-medium text-white mt-10 tracking-tighter">
+              <div className="md:w-[50%] md:h-20 sm:w-full">
+              <h1 className="text-md font-medium text-white mt-10 tracking-tighter ">
                 Connect With Us:
               </h1>
               <div className="flex gap-x-4">
@@ -25,8 +26,9 @@ export default function Footer(){
                   <i class="fa-brands fa-instagram text-white text-sm font-light"></i>
                 </div>
               </div>
+              </div>
             </div>
-            <div className="">
+            <div className="md:col-span-6 md:w-[50%] md:h-20 md:ml-[75%] md:-mt-20 sm:w-full sm:-ml-0 sm:mt-[300px]">
               <h1 className="text-md font-medium text-white">Opening Time</h1>
               <div className="mt-10 flex flex-col gap-y-4 opacity-80">
                 <p className="text-xs tracking-normal font-thin text-white">
@@ -37,7 +39,7 @@ export default function Footer(){
                 </p>
               </div>
             </div>
-            <div>
+            <div className="md:w-[50%] md:h-20 md:mt-20 sm:w-full">
               <h1 className="text-md font-medium text-white">Customer Care</h1>
               <div className="mt-10 flex flex-col gap-y-5 opacity-80">
                 <p className="text-xs tracking-normal font-thin text-white">
@@ -54,7 +56,7 @@ export default function Footer(){
                 </p>
               </div>
             </div>
-            <div>
+            <div className="md:w-[50%] md:h-full md:ml-[75%] md:-mt-20 sm:-ml-0 sm:mt-40">
               <h1 className="text-md font-medium text-white">Information</h1>
               <div className="mt-10 flex flex-col gap-y-5 opacity-80">
                 <p className="text-xs tracking-normal font-extralight text-white">
