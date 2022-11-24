@@ -47,6 +47,7 @@ export default function Account() {
                 className=" bg-[#F6F6F6F6] outline-none focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
               />
             </div>
+            <button className="">Create</button>
           </form>
         </div>
       </div>
