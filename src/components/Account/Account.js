@@ -47,7 +47,13 @@ export default function Account() {
                 className=" bg-[#F6F6F6F6] outline-none focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
               />
             </div>
-            <button className="">Create</button>
+            <button className="flex items-center mt-5 ">
+            <p className=" text-sm border-[2px] font-medium uppercase border-black w-32 h-14  flex justify-center items-center">
+           Create
+          </p>
+
+          <p className=" text-xs ml-4 ">Or Return To Store </p>
+            </button>
           </form>
         </div>
       </div>
