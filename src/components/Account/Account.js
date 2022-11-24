@@ -1,8 +1,6 @@
 import { useForm } from "react-hook-form";
 
-
 export default function Account() {
-
   let { handleSubmit, register, formState, reset } = useForm({
     mode: "onSubmit",
     reValidateMode: "onSubmit",
@@ -30,21 +28,31 @@ export default function Account() {
           <div className="w-full h-[1px] bg-gray-200 mt-2"></div>
           <form className="w-full h-32 " onSubmit={handleSubmit(handle)}>
             <div className="flex mt-5">
-              <p className="text-sm text-gray-700 w-[128px] ml-24">First Name</p>
+              <p className="text-sm text-gray-700 w-[128px] ml-24">
+                First Name
+              </p>
               <input
                 type="text"
+                name="name"
                 placeholder="First Name"
-                className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
+                className={formState?.errors?.name?.message ?" border-[1px] border-red-800  outline-none text-xs px-2 focus:border-red-300 focus:border-[2px] rounded-md h-7 w-full":" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full"}
+                id="shadow"
+                {...register("firdt_name", {
+                  required: "Please enter name"
+              })}
               />
-              <p className="text-red-500">{formState?.errors?.name?.message}</p>
-
+          
             </div>
             <div className="flex mt-5">
               <p className="text-sm text-gray-700 w-32  ml-24">Last Name</p>
               <input
                 type="text"
                 placeholder="Last Name"
-                className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
+                className={formState?.errors?.name?.message ?" border-[1px] border-red-800  outline-none text-xs px-2 focus:border-red-300 focus:border-[2px] rounded-md h-7 w-full":" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full"}
+                id="shadow"
+                {...register("last_name", {
+                  required: "Please enter name"
+              })}
               />
             </div>
 
@@ -53,7 +61,8 @@ export default function Account() {
               <input
                 type="text"
                 placeholder="Email"
-                className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
+                className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full"
+                id="shadow"
               />
             </div>
 
@@ -62,17 +71,19 @@ export default function Account() {
               <input
                 type="text"
                 placeholder="Password"
-                className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
+                className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full"
+                id="shadow"
               />
             </div>
-            <button className="flex items-center mt-5 ">
-            <p
-            type="submit"
-             className=" text-sm border-[2px] font-medium uppercase border-black w-32 h-14  flex justify-center items-center">
-           Create
-          </p>
+            <button  type="submit" className="flex items-center mt-5 ">
+              <p
+               
+                className=" text-sm border-[2px] font-medium uppercase border-black w-32 h-14  flex justify-center items-center"
+              >
+                Create
+              </p>
 
-          <p className=" text-xs ml-4 ">Or Return To Store </p>
+              <p className=" text-xs ml-4 ">Or Return To Store </p>
             </button>
           </form>
         </div>
