@@ -1,4 +1,16 @@
+import { useForm } from "react-hook-form";
+
+
 export default function Account() {
+
+  let { handleSubmit, register, formState, reset } = useForm({
+    mode: "onSubmit",
+    reValidateMode: "onSubmit",
+  });
+  function handle(e) {}
+
+  console.log(formState?.errors?.name?.message);
+
   return (
     <div className="w-full h-screen  ">
       <div className="w-full h-40 bg-[#F6F6F6] flex justify-center items-center md:h-32 sm:h-32">
@@ -16,14 +28,16 @@ export default function Account() {
             </h3>
           </div>
           <div className="w-full h-[1px] bg-gray-200 mt-2"></div>
-          <form className="w-full h-32 ">
+          <form className="w-full h-32 " onSubmit={handleSubmit(handle)}>
             <div className="flex mt-5">
-              <p className="text-sm text-gray-700 inline-block w-[128px] ml-24">First Name</p>
+              <p className="text-sm text-gray-700 w-[128px] ml-24">First Name</p>
               <input
                 type="text"
                 placeholder="First Name"
                 className=" border-[1px] border-gray-200  outline-none text-xs px-2 focus:border-blue-300 focus:border-[1px]   rounded-sm h-7 w-full" id="shadow"
               />
+              <p className="text-red-500">{formState?.errors?.name?.message}</p>
+
             </div>
             <div className="flex mt-5">
               <p className="text-sm text-gray-700 w-32  ml-24">Last Name</p>
@@ -52,7 +66,9 @@ export default function Account() {
               />
             </div>
             <button className="flex items-center mt-5 ">
-            <p className=" text-sm border-[2px] font-medium uppercase border-black w-32 h-14  flex justify-center items-center">
+            <p
+            type="submit"
+             className=" text-sm border-[2px] font-medium uppercase border-black w-32 h-14  flex justify-center items-center">
            Create
           </p>
 
