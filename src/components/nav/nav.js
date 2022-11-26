@@ -12,7 +12,7 @@ export default function Nav() {
         <div className="h-[92px] flex justify-between items-center px-24 w-full bg-[#F6F6F6] md:px-12 md:py-3 md:flex md:items-end sm:px-2 sm:flex sm:justify-center">
           <h1
             className="font-base flex items-center text-xs  sm:text-[12px]"
-            onClick={() => SignUpHistory.push("/Account")}
+            onClick={() => SignUpHistory.push("/Register")}
           >
             CURRENCY{""}
             <i class="fa-solid fa-chevron-down text-[9px] pl-[5px]"></i>
@@ -21,6 +21,7 @@ export default function Nav() {
             src={logo}
             className="h-14 bg-cover md:h-full sm:h-12 sm:mx-5  "
             alt=""
+            onClick={() => SignUpHistory.push("/Header")}
           />
           <div className="flex items-center sm:text-[12px]">
             <i class="fa-solid fa-magnifying-glass "></i>
