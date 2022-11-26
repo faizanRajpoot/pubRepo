@@ -31,6 +31,23 @@ app.post("/collection", (req, res) => {
   );
 });
 
+
+
+app.post("/register", (req, res) => {
+  const body =req.body;
+  return connection.query(
+    `insert into register (first_name,last_name,email,password) values(?,?,?,?)`,
+    [body.first_name, body.last_name, body.email,body.password],
+    (err, result) => {
+      console.log(err);
+      if (err) {
+        return res.status(500).json({ message: "somthing error" });
+      }
+      return res.json({ result, message: "okkk" });
+    }
+  );
+});
+
 app.get("/collection", (req, res) => {
   return connection.query(`select * from collection`, [], (err, result) => {
     if (err) {
@@ -41,29 +58,3 @@ app.get("/collection", (req, res) => {
   });
 });
 app.listen(4000, () => console.log("listening on port"));
-
-// app.post("/category", (req, res) => {
-//   const body = req.body;
-//   return connection.query(
-//     `insert into category (name,category_id) values("subahn",1)`,
-//     [],
-//     (err, result) => {
-//       console.log(err);
-//       if (err) {
-//         return res.status(500).json({ message: "somthing error" });
-//       }
-//       return res.json({ result, message: "okkk" });
-//     }
-//   );
-// });
-
-// app.get("/category", (req, res) => {
-//   return connection.query(`select * from category `, [], (err, result) => {
-//     if (err) {
-//       return res.status(500).json({ message: "error" });
-//     }
-//     return res.json({ result, message: "ok" });
-//   });
-// });
-
-// app.listen(4000, () => console.log("app is working on port"));
