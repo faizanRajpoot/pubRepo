@@ -21,8 +21,8 @@ export default function SignIn() {
 
   return (
     <div className="w-full h-full  ">
-      <div className="w-full h-60 bg-slate-100 flex justify-center items-center md:h-48 sm:h-32">
-        <h1 className="text-sm tracking-widest">
+      <div className="w-full h-40 bg-slate-100 flex justify-center items-center md:h-48 sm:h-32">
+        <h1 className="text-xs tracking-widest">
           Home / <span className="text-red-600"> Account </span>
         </h1>
       </div>

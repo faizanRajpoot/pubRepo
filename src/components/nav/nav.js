@@ -24,8 +24,8 @@ export default function Nav() {
             onClick={() => SignUpHistory.push("/Header")}
           />
           <div className="flex items-center sm:text-[12px]">
-            <i class="fa-solid fa-magnifying-glass "></i>
-            <i class="fa-brands fa-opencart px-6"></i>
+            <i class="fa-solid fa-magnifying-glass " ></i>
+            <i class="fa-brands fa-opencart px-6"  onClick={() => SignUpHistory.push("/Account")}></i>
 
             <img
               src={menu}

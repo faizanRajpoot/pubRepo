@@ -30,7 +30,7 @@ module.exports = {
 
       xss: [
         {
-          max: "400px",
+          max: "420px",
         },
       ],
     },
