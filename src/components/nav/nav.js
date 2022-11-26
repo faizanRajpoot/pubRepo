@@ -32,7 +32,7 @@ let SignUpHistory = useHistory();
               WOMEN <i class="fa-solid fa-chevron-down text-[9px] pl-[5px]"></i>
             </li>
             <li>
-              SHOP BYyyyy{" "}
+              SHOP BY{" "}
               <i class="fa-solid fa-chevron-down text-[9px] pl-[5px]"></i>
             </li>
             <li>

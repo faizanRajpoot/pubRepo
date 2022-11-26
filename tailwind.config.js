@@ -17,12 +17,12 @@ module.exports = {
           max: "768px",
         },
       ],
-      tab: [
+      sm: [
         {
           max: "700px",
         },
       ],
-      sm: [
+       tab: [
         {
           max: "480px",
         },
