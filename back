@@ -1,0 +1,107 @@
+create database Butique;
+use Butique;
+
+-- collection-Table ---------------------------------------------!
+  
+create table collection(
+id int primary key auto_increment,
+name varchar(50) not null
+
+);
+insert into collection(name) values("Men's collection"),("Women's collection"),("Shoes collection"),("Bag's collection");
+select * from collection;
+drop table collection;
+
+-- TAGS ---------------------------------------------------!
+
+create table tags(
+id int primary key auto_increment,
+name varchar(20) not null
+);
+drop table tags;
+insert into tags(name) values("shoes"),("shirts"),("purse"),("belt");
+
+-- Men's Collection----------------------------------------!
+
+create table men_collection(
+id int auto_increment primary key,
+name varchar(50) not null,
+men_brands varchar(20) not null,
+men_id int not null,
+men_tags varchar(20) not null,
+constraint fk_men_collection_collection foreign key(men_id) references collection(id)
+);
+drop table men_collection;
+insert into men_collection(name,men_tags,men_id) values("Tods T Buckle Patent Loafers","Tods",1),("Tods City Gommino Leather Loafers Cacao",1),("ACCESSORIES",1),("",1),("",1),("",1),("",1),("",1),("",1),("",1),("",1),("",1),("",1),("",1),("",1),("",1),("",1),("",1);
+SELECT * FROM men_collection;
+
+-- Women's Collection----------------------------------------!
+
+create table women_collection(
+id int auto_increment primary key,
+name varchar(50) not null,
+women_id int not null,
+constraint fk_women_collection_collection foreign key(women_id) references collection(id)
+);
+drop table women_collection;
+insert into women_collection(name,women_id) values("SHOES",2),("ACCESSORIES",2);
+SELECT * FROM women_collection;
+
+-- Brands----------------------------------------!
+
+create table brand(
+id int auto_increment primary key ,
+name varchar(20) not null,
+brand_id int,
+constraint fk_brand_collection foreign key(brand_id) references collection(id)
+);
+drop table brand;
+insert into brand(name,brand_id) values("
+Aquazzura",2),("
+Benedetta Bruzziche",2),("
+Christian Louboutin",2),("
+Dolce & Gabbana",2),("
+Diesel",2),("
+Gianvito Rossi",2),("
+Billionaire",1),("
+Christian Louboutin",1),("
+Church's",1),("
+Colombo",1),("
+Diesel",1),("
+Philipp Plein",1),("
+Tods",1);
+insert into brand (name) values("
+Aquazzura"),("
+Church"),("
+Christian Louboutin"),("
+Dolce And Gabbana"),("
+Gina"),("
+Gianvito Rossi"),("
+Jimmy Choo");
+
+select * from brand;
+select * from collection c join brand b on b.brand_id=c.id;
+
+
+
+-- Register----------------------------------------!
+
+create table register (
+id int auto_increment primary key,
+first_name varchar(20) not null,
+last_name varchar(20) not null,
+email varchar(50) not null,
+password varchar(50) not null,
+register_id int
+);
+drop table register;
+
+select * from register;
+
+-- SignIn-----------------------------------------!
+
+create table sign_in(
+id int auto_increment primary key
+
+)
+
