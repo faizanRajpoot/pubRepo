@@ -22,9 +22,15 @@ module.exports = {
           max: "700px",
         },
       ],
-       tab: [
+       xs: [
         {
-          max: "480px",
+          max: "490px",
+        },
+      ],
+
+      xss: [
+        {
+          max: "400px",
         },
       ],
     },

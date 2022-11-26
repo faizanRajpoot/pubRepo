@@ -23,15 +23,15 @@ useEffect(()=>{
   }
 
   return (
-    <div className="w-full h-screen  ">
+    <div className="w-full h-full  ">
       <div className="w-full h-40 bg-[#F6F6F6] flex justify-center items-center md:h-32 sm:h-32">
         <h1 className="text-xs tracking-widest">
           Home / <span className="text-red-600"> Create Account </span>
         </h1>
       </div>
 
-      <div className="w-full h-96  px-24">
-        <div className="w-full h-96 pt-20">
+      <div className="w-full   px-24 py-20 md:px-5">
+        <div className="w-full  pt-10">
           <div className="">
             <h1 className="text-4xl tracking-wider">Create Account</h1>
             <h3 className="text-lg mt-2 tracking-wider">
@@ -39,9 +39,9 @@ useEffect(()=>{
             </h3>
           </div>
           <div className="w-full h-[1px] bg-gray-200 mt-2"></div>
-          <form className="w-full h-32 " onSubmit={handleSubmit(handle)}>
-            <div className="flex mt-5">
-              <p className="text-sm text-gray-700 w-[128px] ml-24">
+          <form className="w-full  " onSubmit={handleSubmit(handle)}>
+            <div className="flex mt-5 md:flex md:flex-col">
+              <p className="text-sm text-gray-700 w-[128px] ml-24 md:ml-0">
                 First Name
               </p>
               <input
@@ -59,8 +59,8 @@ useEffect(()=>{
                 })}
               />
             </div>
-            <div className="flex mt-5">
-              <p className="text-sm text-gray-700 w-32  ml-24">Last Name</p>
+            <div className="flex mt-5 md:flex md:flex-col">
+              <p className="text-sm text-gray-700 w-32  ml-24 md:ml-0">Last Name</p>
               <input
                 type="text"
                 placeholder="Last Name"
@@ -76,8 +76,8 @@ useEffect(()=>{
               />
             </div>
 
-            <div className="flex mt-5">
-              <p className="text-sm text-gray-700 w-[90px] ml-32">Email</p>
+            <div className="flex mt-5 md:flex md:flex-col">
+              <p className="text-sm text-gray-700 w-[90px] ml-32 md:ml-0">Email</p>
               <input
                 type="text"
                 placeholder="Email"
@@ -93,8 +93,8 @@ useEffect(()=>{
               />
             </div>
 
-            <div className="flex mt-5">
-              <p className="text-sm text-gray-700 w-[129px]  ml-24">Password</p>
+            <div className="flex mt-5 md:flex md:flex-col">
+              <p className="text-sm text-gray-700 w-[129px]  ml-24 md:ml-0">Password</p>
               <input
                 type="text"
                 placeholder="Password"

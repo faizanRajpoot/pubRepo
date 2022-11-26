@@ -14,7 +14,7 @@ export default function Footer(){
                 best fashion and lifestyle brands.
                 <br /> +92 346 6666664
               </p>
-              <div className="md:w-[50%] md:h-20 md:mt-0 sm:w-full ">
+              <div className="md:w-[50%] md:h-20 md:mt-0  sm:w-full xs:mt-[10px] xs:py-5 xss:px-5 ">
               <h1 className="text-md font-medium text-white mt-10 tracking-tighter ">
                 Connect With Us:
               </h1>
@@ -28,7 +28,7 @@ export default function Footer(){
               </div>
               </div>
             </div>
-            <div className="md:col-span-6 md:w-[50%] md:h-20 md:ml-[75%] md:-mt-20 sm:w-full sm:-ml-0 sm:mt-[240px]">
+            <div className="md:col-span-6 md:w-[50%] md:h-20 md:ml-[75%] md:-mt-20 sm:w-full md:py-8 sm:-ml-0 sm:mt-[240px] xs:mt-[300px] xs:py-5 xss:mt-[360px]">
               <h1 className="text-md font-medium text-white">Opening Time</h1>
               <div className="mt-10 flex flex-col gap-y-4 opacity-80">
                 <p className="text-xs tracking-normal font-thin text-white">
