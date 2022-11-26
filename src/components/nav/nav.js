@@ -4,22 +4,34 @@ import menu from ".././../img/bg-settings.png";
 import { useHistory } from "react-router-dom";
 
 export default function Nav() {
-let SignUpHistory = useHistory();
+  let SignUpHistory = useHistory();
 
   return (
     <div>
       <nav>
         <div className="h-[92px] flex justify-between items-center px-24 w-full bg-[#F6F6F6] md:px-12 md:py-3 md:flex md:items-end sm:px-2 sm:flex sm:justify-center">
-          <h1 className="font-base flex items-center text-xs  sm:text-[12px]" onClick={()=> SignUpHistory.push('/Account')}>
-            CURRENCY{" "}
+          <h1
+            className="font-base flex items-center text-xs  sm:text-[12px]"
+            onClick={() => SignUpHistory.push("/Account")}
+          >
+            CURRENCY{""}
             <i class="fa-solid fa-chevron-down text-[9px] pl-[5px]"></i>
           </h1>
-          <img src={logo} className="h-14 bg-cover md:h-full sm:h-12 sm:mx-5  " alt="" />
+          <img
+            src={logo}
+            className="h-14 bg-cover md:h-full sm:h-12 sm:mx-5  "
+            alt=""
+          />
           <div className="flex items-center sm:text-[12px]">
             <i class="fa-solid fa-magnifying-glass "></i>
             <i class="fa-brands fa-opencart px-6"></i>
 
-            <img src={menu} alt="" onClick={()=> SignUpHistory.push('/signIn')} className="h-8 bg-cover" />
+            <img
+              src={menu}
+              alt=""
+              onClick={() => SignUpHistory.push("/signIn")}
+              className="h-8 bg-cover"
+            />
           </div>
         </div>
         <div className="h-[76px] w-full border-solid border-[1px] flex justify-center items-center border-gray-200">
@@ -41,7 +53,6 @@ let SignUpHistory = useHistory();
           </ul>
         </div>
       </nav>
-     
     </div>
   );
 }
