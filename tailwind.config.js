@@ -12,6 +12,11 @@ module.exports = {
           max: "1024px",
         },
       ],
+      lgg: [
+        {
+          max: "850px",
+        },
+      ],
       md: [
         {
           max: "768px",

@@ -37,7 +37,7 @@ export default function Nav() {
         </div>
         <div className="h-[76px] w-full border-solid border-[1px] flex justify-center items-center border-gray-200">
           <ul className="font-semibold flex items-center text-xs bg-slate-60 w-[50%] justify-evenly md:w-[80%] sm:w-[90%] sm:text-[10px]">
-            <li>DESIGNER</li>
+            <li  onClick={() => SignUpHistory.push("/CartPopUp")} >DESIGNER</li>
             <li>
               MEN <i class="fa-solid fa-chevron-down text-[9px] pl-[5px]"></i>
             </li>

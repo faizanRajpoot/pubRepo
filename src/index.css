@@ -16,3 +16,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#header{
+  background-image: url("../src/img/header/img1.jpg ");
+  background-size: cover;
+  
+}
+
