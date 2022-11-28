@@ -8,7 +8,6 @@ import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Account from "./components/Account/Account";
 
-
 export default function App() {
   return (
     <BrowserRouter>

@@ -41,15 +41,13 @@ export default function SignIn() {
 
   useEffect(() => {
     if (ass?.length === 0) {
-      console.log("null");
       setError(true);
     }
     if (ass?.length > 0) {
       // axios
       // .get("http://127.0.0.1:4000/register")
       // .then((res) => fetchRegister(res?.data?.result));
-      console.log(ass);
-      history.push("/mmm");
+      history.push("/Account");
     }
   }, [ass]);
 

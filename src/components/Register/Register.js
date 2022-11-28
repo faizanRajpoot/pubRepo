@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+import Nav from "../nav/nav";
 
 export default function Account() {
   let [data, setData] = useState();
@@ -17,12 +19,14 @@ useEffect(()=>{
 
   function handle(e) {
     setData(e);
-
-
     reset();
+    history.push('/Account');
   }
 
+  const history = useHistory();
+
   return (
+    <>
     <div className="w-full h-full  ">
       <div className="w-full h-40 bg-[#F6F6F6] flex justify-center items-center md:h-32 sm:h-32">
         <h1 className="text-xs tracking-widest">
@@ -120,5 +124,6 @@ useEffect(()=>{
         </div>
       </div>
     </div>
+      </>
   );
 }

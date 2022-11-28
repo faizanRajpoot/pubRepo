@@ -7,7 +7,7 @@ let connection = mysql.createConnection({
   host: "127.0.0.1",
   user: "root",
   database: "Butique",
-  password: "rootroot",
+  password: "root",
   port: 3306,
 });
 
