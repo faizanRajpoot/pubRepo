@@ -8,7 +8,7 @@ import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Account from "./components/Account/Account";
 import CartPopUp from "./components/cartPopUp/cartPopUp";
-
+import MenCollection from "./components/collection/men collection/menCollection";
 
 export default function App() {
   return (
@@ -20,6 +20,7 @@ export default function App() {
         <Route path="/Account" component={Account}></Route>
         <Route path="/Header" component={Header}></Route>
         <Route path="/CartPopUp" component={CartPopUp}></Route>
+        <Route path="/MenCollection" component={MenCollection}></Route>
 
       </Main>
     </BrowserRouter>
