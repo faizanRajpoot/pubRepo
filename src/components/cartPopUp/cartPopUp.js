@@ -4,7 +4,7 @@ import cartImg from "../../img/cartPop/cart1.png";
 function cartPopUp() {
   return (
     <div className="w-full  ">
-      <div className="w-full h-44 bg-slate-100 flex flex-col justify-center items-center md:h-48 sm:h-32">
+      <div className="w-full h-44 bg-[#F6F6F6] flex flex-col justify-center items-center md:h-48 sm:h-32">
         <h1 className="text-5xl font-semibold mb-5 lg:text-3xl md:text-2xl">BB Venus La Petit Aurum</h1>
         <h1 className="text-xs tracking-widest">
           Home / <span className="text-red-600"> BB Venus La Petit Aurum </span>

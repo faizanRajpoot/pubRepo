@@ -1,7 +1,7 @@
 export default function Header(){
     return(
         <div className="w-full " >
-            <div className="w-full h-40 bg-slate-100 flex justify-center items-center md:h-48 sm:h-32">
+            <div className="w-full h-40 bg-[#F6F6F6] flex justify-center items-center md:h-48 sm:h-32">
         <h1 className="text-xs tracking-widest">
           Home / <span className="text-red-600"> Account </span>
         </h1>
