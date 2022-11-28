@@ -51,3 +51,9 @@
      box-shadow: #60a5fa 0px 0px 5px .1px ;
 
 }
+
+#header{
+  background-image: url("../src/img/header/img1.jpg ");
+  background-size: cover;
+}
+
