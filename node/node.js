@@ -57,4 +57,29 @@ app.get("/collection", (req, res) => {
 
   });
 });
+app.get("/register", (req, res) => {
+  return connection.query(`select * from register`, [], (err, result) => {
+    if (err) {
+      return res.status(500).json({ message: "error" });
+    }
+    return res.json({ message: "success" , result });
+
+  });
+});
+app.get("/history", (req, res) => {
+  return connection.query(`select * from history`, [], (err, result) => {
+    if (err) {
+      return res.status(500).json({ message: "error" });
+    }
+    return res.json({ message: "success" , result });
+
+  });
+});
 app.listen(4000, () => console.log("listening on port"));
+
+
+
+
+
+
+
