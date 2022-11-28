@@ -1,19 +1,41 @@
-
-
 import logo from ".././../img/logoo.png";
 import menu from ".././../img/bg-settings.png";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import { list } from "postcss";
+import Account from "../Register/Register";
 
 export default function Nav(props) {
+
   let SignUpHistory = useHistory();
 
   const [check, setCheck] = useState(false)
+  const [Cartcheck, setCartCheck] = useState(false)
+
   function popUp() {
     setCheck(true);
+    setCartCheck(false);
   }
   function closePop() {
+    setCheck(false);
+  }
+
+  function goCart() {
+    setCartCheck(true);
+    setCheck(true);
+  }
+
+  function closeCart() {
+    setCheck(false);
+  }
+
+  function goSignIn() {
+    SignUpHistory.push('/signIn');
+    setCheck(false);
+  }
+
+  function goRegister() {
+    SignUpHistory.push('/Register');
     setCheck(false);
   }
 
@@ -29,20 +51,20 @@ export default function Nav(props) {
           </h1>
           <img
             src={logo}
-            className="h-14 bg-cover md:h-full sm:h-12 sm:mx-5  "
+            className="h-14 bg-cover md:h-full sm:h-12 sm:mx-5  cursor-pointer"
             alt=""
             onClick={() => SignUpHistory.push("/Header")}
           />
           <div className="flex items-center sm:text-[12px]">
-            <i class="fa-solid fa-magnifying-glass" ></i>
-            <i class="fa-brands fa-opencart px-6"></i>
+            <i class="fa-solid fa-magnifying-glass cursor-pointer" ></i>
+            <i onClick={goCart} onDoubleClick={closeCart} class="fa-brands fa-opencart px-6 cursor-pointer"></i>
 
             <img
               src={menu}
               alt=""
               onClick={popUp}
               onDoubleClick={closePop}
-              className="h-8 bg-cover"
+              className="h-8 bg-cover cursor-pointer"
             />
 
           </div>
@@ -57,20 +79,20 @@ export default function Nav(props) {
 
           <img
             src={logo}
-            className="h-16 bg-cover sm:h-12"
+            className="h-16 bg-cover sm:h-12 cursor-pointer"
             alt=""
             onClick={() => SignUpHistory.push("/Header")}
           />
           <div className="flex items-center sm:text-[12px]">
-            <i class="fa-solid fa-magnifying-glass xs:hidden" ></i>
-            <i class="fa-brands fa-opencart px-6 xs:hidden" onClick={() => SignUpHistory.push("/Account")}></i>
+            <i class="fa-solid fa-magnifying-glass xs:hidden cursor-pointer" ></i>
+            <i class="fa-brands fa-opencart px-6 xs:hidden cursor-pointer"></i>
 
             <img
               src={menu}
               alt=""
               onClick={popUp}
               onDoubleClick={closePop}
-              className="h-8 bg-cover"
+              className="h-8 bg-cover cursor-pointer"
             />
 
           </div>
@@ -81,7 +103,7 @@ export default function Nav(props) {
 
         <div className="h-[76px] w-full border-solid border-[1px] flex justify-center items-center border-gray-200">
           <ul className="font-semibold flex items-center text-xs bg-slate-60 w-[50%] justify-evenly md:w-[80%] sm:w-[90%] sm:text-[10px]">
-            <li  onClick={() => SignUpHistory.push("/CartPopUp")} >DESIGNER</li>
+            <li onClick={() => SignUpHistory.push("/CartPopUp")} >DESIGNER</li>
             <li onClick={() => SignUpHistory.push("/MenCollection")}>
               MEN <i class="fa-solid fa-chevron-down text-[9px] pl-[5px]"></i>
             </li>
@@ -100,15 +122,15 @@ export default function Nav(props) {
       </nav>
       {(check ?
         <div className="w-[300px] absolute h-[240px] mt-[-75px] ml-[71%] flex place-self-end bg-white shadow-lg md:ml-[55%] xs:w-full xs:ml-0 xs:justify-center">
-          <div className="px-10">
+          {(Cartcheck ? <div>hello</div> : <div className="px-10">
             <h1 className="text-md border-b-[1px] font-medium h-7 mt-11 uppercase">My Account</h1>
             <ul className="ml-3 font-light text-xs flex flex-col gap-y-4 mt-4 xs:ml-0 xs:items-center">
-              <li className="cursor-pointer" onClick={() => SignUpHistory.push("/signIn")}>Sign in</li>
-              <li className="cursor-pointer" onClick={() => SignUpHistory.push("/Register")}>Register</li>
+              <li className="cursor-pointer" onClick={goSignIn}>Sign in</li>
+              <li className="cursor-pointer" onClick={goRegister}>Register</li>
               <li>Wish List</li>
               <li>Checkout</li>
             </ul>
-          </div>
+          </div>)}
         </div> : null)}
     </div>
   );
