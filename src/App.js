@@ -1,4 +1,4 @@
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, useParams } from "react-router-dom";
 import "./App.css";
 import Main from "./components/main";
 import SignIn from "./components/signIn/signIn";
@@ -10,8 +10,8 @@ import Account from "./components/Account/Account";
 import CartPopUp from "./components/cartPopUp/cartPopUp";
 import MenCollection from "./components/collection/men collection/menCollection";
 
-
 export default function App() {
+
   return (
     <BrowserRouter>
       <Main Nav={<Nav/>} Footer={<Footer/>}>
@@ -22,6 +22,7 @@ export default function App() {
         <Route path="/Header" component={Header}></Route>
         <Route path="/CartPopUp" component={CartPopUp}></Route>
         <Route path="/MenCollection" component={MenCollection}></Route>
+        <Route path="/entry/:id" component={CartPopUp}></Route>
 
       </Main>
     </BrowserRouter>

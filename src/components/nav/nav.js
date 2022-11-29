@@ -2,7 +2,6 @@ import logo from ".././../img/logoo.png";
 import menu from ".././../img/bg-settings.png";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
-import { list } from "postcss";
 import Account from "../Register/Register";
 
 export default function Nav(props) {
@@ -10,7 +9,7 @@ export default function Nav(props) {
   let SignUpHistory = useHistory();
 
   const [check, setCheck] = useState(false)
-  const [Cartcheck, setCartCheck] = useState(false)
+  const [Cartcheck, setCartCheck] = useState(false)           
 
   function popUp() {
     setCheck(true);
@@ -85,7 +84,7 @@ export default function Nav(props) {
           />
           <div className="flex items-center sm:text-[12px]">
             <i class="fa-solid fa-magnifying-glass xs:hidden cursor-pointer" ></i>
-            <i class="fa-brands fa-opencart px-6 xs:hidden cursor-pointer"></i>
+            <i onClick={goCart} onDoubleClick={closeCart} class="fa-brands fa-opencart px-6 xs:hidden cursor-pointer"></i>
 
             <img
               src={menu}

@@ -1,21 +1,44 @@
 import React from "react";
 import cartImg from "../../img/cartPop/cart1.png";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
-function cartPopUp() {
+function CartPopUp() {
+  
+  const [data, setData] = useState();
+  const [filteredData, setFilteredData] = useState(); 
+  const params = useParams();
+  
+  // console.log(filteredData,"data");
+
+  useEffect(()=>{
+    axios
+    .get("http://127.0.0.1:4000/shoes")
+    .then((res) => setData(res?.data?.result));
+  },[])
+
+
+  useEffect(() => {
+    const filter = data?.find((v) => v.id === Number(params.id));
+    setFilteredData(filter);
+  }, [data])
+  
+
   return (
     <div className="w-full  ">
       <div className="w-full h-44 bg-[#F6F6F6] flex flex-col justify-center items-center md:h-48 sm:h-32">
-        <h1 className="text-5xl font-semibold mb-5 lg:text-3xl md:text-2xl">BB Venus La Petit Aurum</h1>
+        <h1 className="text-5xl font-semibold mb-5 lg:text-3xl md:text-2xl">{filteredData?.shoes_name}</h1>
         <h1 className="text-xs tracking-widest">
-          Home / <span className="text-red-600"> BB Venus La Petit Aurum </span>
+          Home / <span className="text-red-600"> {filteredData?.shoes_name} </span>
         </h1>
       </div>
       <div className="w-full h-[700px]  flex lg:h-[650px] lgg:h-[600px] md:flex md:flex-col md:h-full md:pb-16 ">
         <div className="w-1/2 h-full  py-12 pl-24 pr-0 md:w-full md:h-[750px] md:px-5 md:py-0 md:pt-5  xs:h-[500px]">
-          <img src={cartImg} alt="Blank" className="w-full h-full" />
+          <img src={filteredData?.shoes_img} alt="Blank" className="w-full h-full" />
         </div>
         <div className="w-1/2 h-full py-12 px-5 pr-10 md:py-2 md:w-full">
-          <p className="text-xl font-medium">BB Venus La Petit Aurum</p>
+          <p className="text-xl font-medium">{filteredData?.shoes_name}</p>
           <p className="mt-20 lgg:mt-7 md:mt-20">Rs.209,950.00</p>
 
           <p className="text-xs tracking-widest mt-6 lgg:mt-4 ">
@@ -70,4 +93,4 @@ function cartPopUp() {
   );
 }
 
-export default cartPopUp;
+export default CartPopUp;
