@@ -9,7 +9,7 @@ export default function Nav(props) {
   let SignUpHistory = useHistory();
 
   const [check, setCheck] = useState(false)
-  const [Cartcheck, setCartCheck] = useState(false)           
+  const [Cartcheck, setCartCheck] = useState(false)
 
   function popUp() {
     setCheck(true);
@@ -120,16 +120,50 @@ export default function Nav(props) {
         </div>
       </nav>
       {(check ?
-        <div className="w-[300px] absolute h-[240px] mt-[-75px] ml-[71%] flex place-self-end bg-white shadow-lg md:ml-[55%] xs:w-full xs:ml-0 xs:justify-center">
-          {(Cartcheck ? <div>hello</div> : <div className="px-10">
-            <h1 className="text-md border-b-[1px] font-medium h-7 mt-11 uppercase">My Account</h1>
-            <ul className="ml-3 font-light text-xs flex flex-col gap-y-4 mt-4 xs:ml-0 xs:items-center">
-              <li className="cursor-pointer" onClick={goSignIn}>Sign in</li>
-              <li className="cursor-pointer" onClick={goRegister}>Register</li>
-              <li>Wish List</li>
-              <li>Checkout</li>
-            </ul>
-          </div>)}
+        <div className="w-[300px] absolute mt-[-75px] pb-6 ml-[71%] flex place-self-end bg-white shadow-lg md:ml-[55%] xs:w-full xs:ml-0 xs:justify-center">
+          {(Cartcheck ?
+            <div className="w-full px-4 overflow-y-scrol">
+              
+              <div className="w-full flex mt-6">
+                <div className="w-24 h-20 bg-gray-400"></div>
+                <div className="w-36 pl-3">
+                  <h1 className="text-sm font-medium">Product Name</h1>
+                  <p className="text-xs font-light py-3">Quantity</p>
+                  <p className="text-xs font-light">Price</p>
+                </div>
+                <div className="flex justify-center">x</div>
+              </div>
+
+              <div className="w-full flex mt-6">
+                <div className="w-24 h-20 bg-gray-400"></div>
+                <div className="w-36 pl-3">
+                  <h1 className="text-sm font-medium">Product Name</h1>
+                  <p className="text-xs font-light py-3">Quantity</p>
+                  <p className="text-xs font-light">Price</p>
+                </div>
+                <div className="flex justify-center">x</div>
+              </div>
+
+              <div className="flex justify-between h-14 items-center border-b-2 border-gray-300">
+                <h1>Subtotal:</h1>
+                <p>Rs:5426</p>
+              </div>
+
+              <div>
+                <button className="text-sm uppercase font-normal bg-transparent border-2 border-black w-full py-3 my-4">View Cart</button>
+                <button className="text-sm uppercase font-normal bg-transparent border-2 border-black w-full py-3">Checkout</button>
+              </div>
+
+            </div>
+            : <div className="px-10">
+              <h1 className="text-md border-b-[1px] font-medium h-7 mt-11 uppercase">My Account</h1>
+              <ul className="ml-3 font-light text-xs flex flex-col gap-y-4 mt-4 xs:ml-0 xs:items-center">
+                <li className="cursor-pointer" onClick={goSignIn}>Sign in</li>
+                <li className="cursor-pointer" onClick={goRegister}>Register</li>
+                <li>Wish List</li>
+                <li>Checkout</li>
+              </ul>
+            </div>)}
         </div> : null)}
     </div>
   );

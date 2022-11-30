@@ -78,7 +78,7 @@ app.get("/history", (req, res) => {
 });
 
 app.get("/shoes", (req, res) => {
-  return connection.query(`select * from shoes`, [], (err, result) => {
+  return connection.query(`select shoes_name, name as brand_name, shoes_img from shoes s join brand b where s.shoes_id_brand = b.id`, [], (err, result) => {
     if (err) {
       return res.status(500).json({ message: "error" });
     }
