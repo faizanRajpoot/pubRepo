@@ -9,8 +9,6 @@ function CartPopUp() {
   const [data, setData] = useState();
   const [filteredData, setFilteredData] = useState(); 
   const params = useParams();
-  
-  // console.log(filteredData,"data");
 
   useEffect(()=>{
     axios
@@ -23,8 +21,11 @@ function CartPopUp() {
     const filter = data?.find((v) => v.id === Number(params.id));
     setFilteredData(filter);
   }, [data])
-  
 
+  function cartFun(){
+      axios.post("http://127.0.0.1:4000/checkOut",filteredData)
+  };
+  
   return (
     <div className="w-full  ">
       <div className="w-full h-44 bg-[#F6F6F6] flex flex-col justify-center items-center md:h-48 sm:h-32">
@@ -71,7 +72,7 @@ function CartPopUp() {
               </div>
             </div>
 
-            <button className="w-48 h-16 border-2 border-[#e73333] text-[#e73333] uppercase text-xs font-bold flex justify-center items-center lgg:w-36 sm:w-28 sm:text-[10px] xs:w-20 xs:text-[7px]">
+            <button onClick={cartFun} className="w-48 h-16 border-2 border-[#e73333] text-[#e73333] uppercase text-xs font-bold flex justify-center items-center lgg:w-36 sm:w-28 sm:text-[10px] xs:w-20 xs:text-[7px]">
               <i class="fa-sharp fa-solid fa-bag-shopping pr-2"></i>
               Add To Cart
             </button>

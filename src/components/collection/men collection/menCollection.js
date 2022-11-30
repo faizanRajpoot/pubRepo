@@ -66,7 +66,7 @@ function MenCollection() {
         <div className="w-full mt-16 flex justify-between gap-y-16 flex-wrap">
          
           {(data?.map((v) => {
-
+        
             return (
 
               <div className="shadow-lg px-3 w-[280px]">

@@ -9,6 +9,7 @@ import Header from "./components/header/header";
 import Account from "./components/Account/Account";
 import CartPopUp from "./components/cartPopUp/cartPopUp";
 import MenCollection from "./components/collection/men collection/menCollection";
+import addToCart from "./components/addToCart/addToCart";
 
 export default function App() {
 
@@ -23,7 +24,7 @@ export default function App() {
         <Route path="/CartPopUp" component={CartPopUp}></Route>
         <Route path="/MenCollection" component={MenCollection}></Route>
         <Route path="/entry/:id" component={CartPopUp}></Route>
-
+        <Route path="/Cart" component={addToCart}></Route>
       </Main>
     </BrowserRouter>
   );
